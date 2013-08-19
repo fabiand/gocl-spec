@@ -16,7 +16,7 @@ Patch0:         gocl-build.patch
 BuildRequires:  automake
 BuildRequires:  glibc-devel
 BuildRequires:  gobject-introspection-devel
-BuildRequires:  ocl-icd opencl-headers
+BuildRequires:  ocl-icd-devel opencl-headers
 
 
 %description
