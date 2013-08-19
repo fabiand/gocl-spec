@@ -21,7 +21,15 @@ BuildRequires:  ocl-icd-devel opencl-headers
 
 
 %description
-Gocl is a GLib/GObject based library that aims at simplifying the use of OpenCL in GNOME software. It is intended to be a lightweight wrapper that adapts OpenCL programming patterns and boilerplate, and expose a simpler API that is known and comfortable to GNOME developers. Examples of such adaptations are the integration with GLib’s main loop, exposing non-blocking APIs, GError based error reporting and full gobject-introspection support. It will also be including convenient API to simplify code for the most common use patterns. 
+Gocl is a GLib/GObject based library that aims at simplifying the
+use of OpenCL in GNOME software. It is intended to be a lightweight
+wrapper that adapts OpenCL programming patterns and boilerplate, and
+expose a simpler API that is known and comfortable to GNOME
+developers. Examples of such adaptations are the integration with
+GLib’s main loop, exposing non-blocking APIs, GError based error
+reporting and full gobject-introspection support. It will also be
+including convenient API to simplify code for the most common use
+patterns. 
 
 
 %package        devel
