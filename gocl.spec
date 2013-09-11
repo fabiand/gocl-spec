@@ -1,14 +1,13 @@
-%define api_version 0.1
+%global api_version 0.1
 
 Name:           gocl
 Version:        0.1.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GLib/GObject based library for OpenCL
 
 License:        LGPLv3
 URL:            https://github.com/elima/gocl/
-# curl -o %{name}-%{version}.tar.gz https://github.com/elima/%{name}/archive/%{version}.tar.gz
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/elima/gocl/archive/%{version}.tar.gz#%{name}-%{version}.tar.gz
 
 # Tracked upstream in https://github.com/elima/gocl/pull/1
 Patch0:         gocl-build.patch
@@ -67,18 +66,23 @@ find %{buildroot} -type f -name '*.la' | xargs rm -f -- || :
 %files
 %doc COPYING examples/js/helloWorld.js
 %{_libdir}/libgocl-%{api_version}.so.*
-%{_libdir}/girepository-1.0/Gocl-%{api_version}.typelib
+%{_libdir}/girepository-1.0/
 
 
 %files devel
-%doc
+%doc examples/hello-world.c examples/hello-world.cl examples/hello-world-sync.c examples/gaussian-blur.c examples/gaussian-blur.cl
 %{_libdir}/libgocl-%{api_version}.so
 %{_libdir}/pkgconfig/%{name}-%{api_version}.pc
-%{_datadir}/gir-1.0/Gocl-%{api_version}.gir
-%{_datadir}/gtk-doc/html/%{name}/
+%{_datadir}/gir-1.0/
+%{_datadir}/gtk-doc/
 %{_includedir}/gocl-%{api_version}/
 
 
 %changelog
+* Wed Sep 11 2013 Fabian Deutsch <fabiand@fedoraproject.org> - 0.1.4-2
+- Own directories
+- Package examples
+- Use global instead of define
+
 * Sun Aug 18 2013 Fabian Deutsch <fabiand@fedoraproject.org> - 0.1.4-1
 - Initial package
