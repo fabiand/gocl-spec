@@ -7,7 +7,7 @@ Summary:        GLib/GObject based library for OpenCL
 
 License:        LGPLv3
 URL:            https://github.com/elima/gocl/
-Source0:        https://github.com/elima/gocl/archive/%{version}.tar.gz#%{name}-%{version}.tar.gz
+Source0:        https://github.com/elima/gocl/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 # Tracked upstream in https://github.com/elima/gocl/pull/1
 Patch0:         gocl-build.patch
